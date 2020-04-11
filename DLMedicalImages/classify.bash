@@ -13,7 +13,7 @@ module load spark/2.3.2-hadoop2.7
 # This syntax tells spark to use all cpu cores on the node.
 export MASTER="local[*]"
 
-script=binary_classification_metrics_example.py
+script=classification.py
 
         # check what time it is before the job starts
         STARTT=`date +%s`
