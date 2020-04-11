@@ -12,8 +12,8 @@ from keras.optimizers import Adam
 # dimensions of our images.
 img_width, img_height = 299, 299
 
-train_data_dir = '/home/username/data/Open_I_abd_vs_CXRs/TRAIN' #location of training data
-validation_data_dir = '/home/username/data/Open_I_abd_vs_CXRs/VAL' #location of validation data
+train_data_dir = '/home/jiang.yiy/Hello_World_Deep_Learning/Open_I_abd_vs_CXRs/TRAIN' #location of training data
+validation_data_dir = '/home/jiang.yiy/Hello_World_Deep_Learning/Open_I_abd_vs_CXRs/VAL' #location of validation data
 
 # number of samples used for determining the samples_per_epoch
 nb_train_samples = 65
@@ -82,8 +82,8 @@ plt.show()
 import numpy as np
 from keras.preprocessing import image
 
-img_path='/home/username/data/Open_I_abd_vs_CXRs/TRAIN/chest1.png' #change to location of chest x-ray
-img_path2='/home/username/data/Open_I_abd_vs_CXRs/TRAIN/abd2.png'  #change to location of abd x-ray
+img_path='/home/jiang.yiy/Hello_World_Deep_Learning/Open_I_abd_vs_CXRs/TRAIN/chest1.png' #change to location of chest x-ray
+img_path2='/home/jiang.yiy/Hello_World_Deep_Learning/Open_I_abd_vs_CXRs/TRAIN/abd2.png'  #change to location of abd x-ray
 img = image.load_img(img_path, target_size=(img_width, img_height))
 img2 = image.load_img(img_path2, target_size=(img_width, img_height))
 plt.imshow(img)
