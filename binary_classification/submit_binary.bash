@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #SBATCH --job-name=spark_multinode
-#SBATCH --nodes=2					#Nodes
-#SBATCH --ntasks-per-node=2         #will request 2 cores across multiple nodes
+#SBATCH --nodes=1					#Nodes
+#SBATCH --ntasks-per-node=4         #will request 2 cores across multiple nodes
 #SBATCH --time=01:00:00             #time to run the job
 #SBATCH -p short                    #short partition with a 24hour time limit
 #SBATCH --constraint=ib             #run only on the new nodes with IB network
@@ -23,4 +23,4 @@ script=binary_classification_metrics_example.py
         # check what time it is when the command finishes
         ENDT=`date +%s`
         ELAPSED=`echo 0 | awk -v e=$ENDT -v s=$STARTT '{print e-s}'`
-                     echo "Number of cores: $SLURM_NTASKS , run-time: $ELAPSED seconds" >> performance.log
+                     echo "Number of nodes: $SLURM_NNODES, Number of cores: $SLURM_NTASKS , run-time: $ELAPSED seconds" >> performance.log
